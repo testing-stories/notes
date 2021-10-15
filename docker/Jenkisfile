@@ -1,0 +1,9 @@
+node {
+  stage("Build docker") {
+    script {
+      sh "ls -la"
+      sh "pwd"
+      sh "docker images ls"
+    }
+  }
+}
