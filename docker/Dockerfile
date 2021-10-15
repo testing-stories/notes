@@ -17,4 +17,4 @@ WORKDIR /home/ubuntu
 
 #Copy test content:
 #COPY work/* /home/ubuntu/
-RUN chown root:ubuntu /home/ubuntu
+#RUN chown root:ubuntu /home/ubuntu
