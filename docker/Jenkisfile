@@ -1,9 +1,13 @@
-node {
-  stage("Build docker") {
-    script {
-      sh "ls -la"
-      sh "pwd"
-      sh "docker images ls"
+ node { 
+  stage('Checkout code') {
+        script {
+            checkout scm
+            sh "ls -lah"
+            dir("docker") {
+                sh "ls -la"
+                sh "docker build -t test-docker:latest . "
+                sh "docker image ls"
+            }
+        }
     }
-  }
-}
+ }
